@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Natália cunha",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 34.8,
+      "left": -140.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 167.15,
+      "left": -96,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+  ["led1:C", "r1:1", "blue",["v0"]],
+  ["pico:GND.4","r1:2","black",["h0"]],
+  ["pico:GP13","led1:A","green",["h0"]] 
+  ],
+  "dependencies": {}
+}
